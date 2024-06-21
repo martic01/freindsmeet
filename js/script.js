@@ -723,4 +723,7 @@ window.onload = function () {
             $("#color2").hide();
         }
     });
+    $(".owners-li").click(function () {
+        $(".adi").html('<audio src="audio/song.mp3" autoplay loop controls></audio>');
+    });
 }
