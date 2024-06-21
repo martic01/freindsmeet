@@ -204,6 +204,83 @@ body {
     box-shadow: 0 0 30px -5px rgb(14, 1, 1);
     background-color: #fff;
 }
+.owners-li .buttin {
+    width: 50%;
+    height: 40%;
+    border-radius: 20px;
+    box-shadow: 0 0 30px -5px rgb(14, 1, 1);
+
+}
+.owners-li .buttin p {
+    height: 40%;
+    text-align: center;
+    font-size: 25px;
+    color: rgb(54, 3, 3);
+    font-weight: 900;
+
+}
+.owners-li .return {
+    height: 40px;
+    width: 100%;
+    text-align: center;
+    font-size: 20px;
+    color: rgb(17, 2, 2);
+    font-weight: 900;
+    margin-bottom: 30px;
+
+}
+
+
+.owners-li .image {
+    margin:20px auto;
+    height: 150px;
+    width: 60%;
+    background-color: #000;
+
+
+}
+.owners-li .buttin button {
+    margin-left: 18px;
+    margin-top: -30px;
+    border: none;
+    width: 90%;
+    height: 40%;
+    font-size: 30px;
+    font-weight: 900;
+    border-radius: 10px;
+    background-color: #0d1cf1;
+    color: #f8f8f8;
+    text-shadow: 0 0 15px aqua;
+
+}
+
+.list2 button {
+    margin-left: 40px;
+    border: none;
+    width: 90%;
+    height: 50px;
+    font-size: 30px;
+    font-weight: 900;
+    border-radius: 10px;
+    background-color: #0d1cf1;
+    color: #f8f8f8;
+    text-shadow: 0 0 15px aqua;
+
+}
+.list2 button:hover {
+    border: 2px solid rgb(59, 27, 238);
+    transition: 0.5s ease-in-out;
+    background-color: #fff;
+    color: blue;
+}
+
+.owners-li .buttin button:hover {
+    border: 2px solid rgb(59, 27, 238);
+    transition: 0.5s ease-in-out;
+    background-color: #fff;
+    color: blue;
+}
+
 
 .owners-li p {
     height: 15%;
@@ -213,7 +290,28 @@ body {
     color: rgb(54, 3, 3);
     font-weight: 900;
     margin: auto;
+    margin-bottom: 10px;
+}
+.owners-li .switch {
+    height: 15%;
+    width: 16%;
+    text-align: center;
+    border-radius: 10px;
+    font-size: 20px;
+    color: rgb(108, 196, 8);
+    font-weight: 900;
+    margin: auto;
     margin-bottom: 20px;
+    display: none;
+}
+.owners-li .switch:hover {
+    height: 16%;
+    width: 20%;
+    transition: 0.8s ease-in-out;
+    font-size: 23px;
+    box-shadow: 0 0 20px -4px black;
+    color: rgb(108, 196, 8);
+    font-weight: 900;
 }
 
 .owners-li ul {
@@ -265,7 +363,14 @@ body {
 .curve {
     border-radius: 20px;
 }
+.owners-li ul li div:first-child:hover {
+    transition: 0.3s ease-in-out;
+    font-size: 19px;
+    text-align: center;
+    box-shadow: 0 0 7px 1px black;
+    background-color: transparent !important;
 
+}
 .owners-li ul li div:first-child {
     width: 70%;
     font-size: 18px;
@@ -273,7 +378,7 @@ body {
     color: #0707a1;
     opacity: 0;
 
-    animation: fadein 7s linear forwards;
+    animation: fadein 4s linear forwards;
 }
 
 @keyframes fadein {
@@ -339,6 +444,43 @@ body {
     padding-left: 10px;
 }
 
+.owners-li ul li .change .edit2 {
+    width: 50%;
+    font-size: 15px;
+    color: #08612d;
+    display: none;
+}
+
+.owners-li ul li .change .edit2:hover {
+    transition: 0.3s ease-in-out;
+    font-size: 17px;
+    color: #1f2421;
+}
+
+.owners-li ul li .change .delete2 {
+    width: 40%;
+    font-size: 15px;
+    color: #f00d0d;
+    padding-left: 10px;
+    display: none;
+}
+
+.owners-li ul li .change .delete2:hover {
+    transition: 0.3s ease-in-out;
+    font-size: 13px;
+    color: #742c2c;
+    padding-left: 10px;
+}
+.list2{
+    opacity: 0;
+    animation:1s inco linear forwards;
+}
+@keyframes inco{
+to{
+    opacity: 1;
+}
+}
+
 .questions {
     display: none;
 
@@ -357,13 +499,51 @@ body {
     display: none;
 }
 
-#drop2 {
+#done {
     display: none;
+}
+.owners-li  .list1{
+    z-index: 1;
+}
+.owners-li  .list3{
+    z-index: 1;
+    display: none;
+}
+.move{
+    margin-right: -150px;
+}
+.move2{
+    margin-left: -150px;
+}
+.owners-li  .list2{
+    z-index: 99;
+    display: none;
+}
+.owners-li .list2 .compare li{
+    display: none;
+}
+.owners-li .list2 .compare {
+    display: none;
+}
+.owners-li .list2 #compareinput {
+    display: none;
+}
+.owners-li .buttin{
+    display: none;
+}
+img{
+    height: 100%;
+    width: 100%;
 }
 .owners-li #color div{
     color: white;
 
 }
-.white{
-    color:white;
+.owners-li #color2 div{
+    color: white;
+
+}
+.redin{
+    opacity: 0.8;
+    background-color:rgb(241, 240, 240);
 }
