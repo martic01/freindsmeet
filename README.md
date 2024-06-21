@@ -47,7 +47,7 @@ This is a website that give it user the chance to the bestfriend for them, with 
 ```bash
 # Repository Address
 
-git clone https://github.com/martic01/friendsmeet.git
+git clone https://github.com/martic01/freindsmeet.git
 ```
 ### Navigate to top directory
 ```bash
