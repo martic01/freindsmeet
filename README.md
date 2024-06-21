@@ -53,7 +53,7 @@ git clone https://github.com/martic01/freindsmeet.git
 ```bash
 # Project Name
 
-cd project folder name
+cd freindsmeet
 
 ```
 ### Open the application
