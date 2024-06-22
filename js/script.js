@@ -8,8 +8,22 @@ function textInput() {
 function colourInput() {
     return document.getElementById("input3").value;
 }
+function firstLetter(textinput) {
+    let newText = textinput.trim();
+    let shift =  newText.charAt(0).toUpperCase();
+    let remain = newText.slice(1,newText.length);
+    let joinin = shift + remain
+    let trimed = joinin
+    return trimed
+}
+
 function compareInput() {
     return parseInt(document.getElementById("compareinput").value);
+}
+function textUpercase() {
+    let newText = $("li").html();
+    let shift =  newText.charAt(0).toUpperCase()
+    return shift
 }
 function increaseByone() {
     return indexInput() + 1;
@@ -18,34 +32,52 @@ function increaseByone2() {
     return compareInput() + 1;
 }
 function PromtTimer() {
+    $(".letgo").show()
     $(".compare").show()
     $(".changecomp").hide()
     setTimeout(function () {
+        $(".letgo").hide()
         $(".compare").hide()
         $(".changecomp").show()
         $(".image").html('<img src="img/close.webp">')
-        $(".return").html(compareInput() + " matches you might be friends" )
-    }, 7000);
+        $(".return").html(compareInput() + " matches you might become friends" )
+    }, 8000);
 }
 function PromtTimer2() {
+    $(".letgo").show()
     $(".compare").show()
     $(".changecomp").hide()
     setTimeout(function () {
+        $(".letgo").hide()
         $(".compare").hide()
         $(".changecomp").show()
         $(".image").html('<img src="img/almost.webp">')
         $(".return").html(compareInput() + " matches you will be bestfriends" )
-    }, 7000);
+    }, 8000);
 }
 function PromtTimer3() {
+    $(".letgo").show()
     $(".compare").show()
     $(".changecomp").hide()
     setTimeout(function () {
+        $(".letgo").hide()
         $(".compare").hide()
         $(".changecomp").show()
         $(".image").html('<img src="img/good.webp">')
         $(".return").html("All matches you will be Bestfriends , if you two are opposite gender you might get married" )
-    }, 7000);
+    }, 8000);
+}
+function PromtTimer4() {
+    $(".letgo").show()
+    $(".compare").show()
+    $(".changecomp").hide()
+    setTimeout(function () {
+        $(".letgo").hide()
+        $(".compare").hide()
+        $(".changecomp").show()
+        $(".image").html('<img src="img/almost.webp">')
+        $(".return").html("There is nothing to compare your names match friends list names , that shows you are friends already" )
+    }, 8000);
 }
 function arrayDrop() {
     //   let  renewedArray = {};
@@ -73,12 +105,14 @@ function arrayDrop() {
     let quest13 = $(".quest13").text();
     let quest14 = $(".quest14").text();
     let questionsArray = [quest1, quest2, quest3, quest4, quest5, quest6, questFrdNm, quest8, quest9, quest10, quest11, quest12, quest13, quest14];
-    let name = textInput()
-    let colorName = colourInput()
+    let name = firstLetter(textInput())
+    let colorName = firstLetter(colourInput())
     if (indexInput() === 0 && name !== "" && name !== questNm && !rule2) {
         //   renewedArray[name] = []
         //   var arrayName = renewedArray[name]
-        $(".name").html(name + "'s");
+        textUpercase()
+        $(".name").html(name);
+        $(".s").show();
         $("#input1").val(increaseByone())
         $("#input2").removeClass("curve");
         $("#input2").val(questionsArray[0])
@@ -151,7 +185,7 @@ function arrayDrop() {
         $("#drop").hide();
         $("#done").show();
         // $("#input3").hide();
-        $("#input3").val("switch");
+        $("#input3").val("Switch");
         $("#color").css("background-color", name);
         $("#input2").prop("type", "text")
         $("#input2").val(questionsArray[6])
@@ -167,7 +201,7 @@ function arrayDrop() {
     } else if (indexInput() === 8 && name !== "" && name !== questFrdNm && !rule2) {
         //   renewedArray[name] = []
         //   var arrayName = renewedArray[name]
-        $(".name2").html(name + "'s");
+        $(".name2").html(name);
         $("#input1").val(increaseByone())
         $("#input2").removeClass("curve");
         $("#input2").val(questionsArray[7])
@@ -237,7 +271,7 @@ function arrayDrop() {
         $("#color2").show();
         $("#input3").hide();
         $("#color2").css("background-color", name);
-        $("#input3").val("switch2");
+        $("#input3").val("Switch2");
         // arrayName.concat(name)
         // console.log(renewedArray)
         $(".color2").html(colorName);
@@ -254,7 +288,7 @@ function arrayDrop() {
         $("#input2").addClass("redin");
     }
 
-    if (name !== "" && colorName === "switch" && !rule2) {
+    if (name !== "" && colorName === "Switch" && !rule2) {
         $("#color").show();
         $("#input1").hide();
         $("#input2").hide();
@@ -265,7 +299,7 @@ function arrayDrop() {
 
 
     }
-    if (name !== "" && colorName === "switch2" && !rule2 && name !== questionsArray) {
+    if (name !== "" && colorName === "Switch2" && !rule2 && name !== questionsArray) {
         $("#color").show();
         $("#input1").hide();
         $("#input2").hide();
@@ -325,14 +359,22 @@ function compareResult() {
 
 
 
-
-    if (food1 === food2) {
+    if (friend1 === secoundNm && friend2 === firstNm && compareInputl >= 0) {
+        $(".frndresult").html("Same");
+        $("#frndresult").show();
+        $(".frnd").addClass("green");
+        $(".frnd2").addClass("green");
+        $(".name").addClass("green");
+        $(".name2").addClass("green");
+        PromtTimer4()
+    }
+    if (food1 === food2 ) {
         $(".foodresult").html(food1);
         $("#foodresult").show();
        
 
     }
-    if (friend1 === friend2) {
+    if (friend1 === friend2  ) {
         $(".frndresult").html(friend1);
         $("#frndresult").show();
        
@@ -364,17 +406,17 @@ function compareResult() {
         $("#colorresult").show();
     }
     
-    if (compareInputl === 0 ) {
+    if (compareInputl === 0 && friend1 !== secoundNm && friend2 !== firstNm ) {
         $(".compare").hide()
         $(".changecomp").show()
     }
-   else if (compareInputl <= 4) {
+   else if (compareInputl <= 4 && friend1 !== secoundNm && friend2 !== firstNm) {
        PromtTimer()
     }
-    else if (compareInputl  < 7) {
+    else if (compareInputl  < 7 && friend1 !== secoundNm && friend2 !== firstNm) {
         PromtTimer2()
      }
-     else if (compareInputl === 7) {
+     else if (compareInputl === 7 && friend1 !== secoundNm && friend2 !== firstNm) {
         PromtTimer3()
      }
 
@@ -382,7 +424,7 @@ function compareResult() {
 function doneButton() {
     let check = colourInput()
     $("#input2").removeClass("redin");
-    if (check === "switch") {
+    if (check === "Switch") {
         $("#input1").show();
         $("#input1").val(8);
         $("#input2").val("");
@@ -398,7 +440,7 @@ function doneButton() {
         $("#drop").show();
 
     }
-    if (check === "switch2") {
+    if (check === "Switch2") {
         $(".inputs").hide();
         $(".list1").show();
         $(".list3").show();
@@ -551,7 +593,7 @@ window.onload = function () {
         if (index === index) {
             $("#input1").val(index);
             $("#input2").val(text);
-            $("#input3").val("switch");
+            $("#input3").val("Switch");
             $("#done").hide()
             $("#drop").show()
             $("#input3").hide();
@@ -577,7 +619,7 @@ window.onload = function () {
             $("#input1").val(9);
             $("#input2").val(text);
             $("#input3").hide();
-            $("#input3").val("switch2");
+            $("#input3").val("Switch2");
             $("#input2").prop("type", "text")
         } else if (index === 2) {
             $("#done").hide()
@@ -588,7 +630,7 @@ window.onload = function () {
             $("#input1").val(10);
             $("#input2").val(text);
             $("#input3").hide();
-            $("#input3").val("switch2");
+            $("#input3").val("Switch2");
             $("#input2").prop("type", "text")
         } else if (index === 3) {
             $("#input1").val(11);
@@ -599,7 +641,7 @@ window.onload = function () {
             $("#input1").show();
             $("#input2").val(text);
             $("#input3").hide();
-            $("#input3").val("switch2");
+            $("#input3").val("Switch2");
             $("#input2").prop("type", "text")
         } else if (index === 4) {
             $("#input1").val(12);
@@ -610,7 +652,7 @@ window.onload = function () {
             $("#input1").show();
             $("#input2").val(text);
             $("#input3").hide();
-            $("#input3").val("switch2");
+            $("#input3").val("Switch2");
             $("#input2").prop("type", "text")
         } else if (index === 5) {
             $("#input1").val(13);
@@ -621,7 +663,7 @@ window.onload = function () {
             $("#input1").show();
             $("#input2").val(text);
             $("#input3").hide();
-            $("#input3").val("switch2");
+            $("#input3").val("Switch2");
             $("#input2").prop("type", "text")
         } else if (index === 6) {
             $("#input1").val(14);
@@ -630,7 +672,7 @@ window.onload = function () {
             $("#input3").hide();
             $("#input2").show();
             $("#input1").show();
-            $("#input3").val("switch2");
+            $("#input3").val("Switch2");
             $("#input2").val(text);
             $("#input3").hide();
             $("#input2").prop("type", "text")
@@ -641,7 +683,7 @@ window.onload = function () {
             $("#input3").show();
             $("#input2").show();
             $("#input1").show();
-            $("#input3").val("switch2");
+            $("#input3").val("Switch2");
             $("#input2").val(text);
             $("#input2").prop("type", "color")
         } else {
