@@ -18,177 +18,200 @@
         </p>
         <p>Find your Friend</p>
     </div>
-    <main class="cont">
-        <div class="fav">
-            <p> Favourite list</p>
-        </div>
-        <div class="inputs">
-            <input type="text" value="0" readonly id="input1" class="input"><input value="What is your name" type="text"
-                placeholder="Tap screen to see question" id="input2" class="input"> <input placeholder="Name of colour"
-                type="text" class="input" id="input3">
-            <button id="drop">Drop</button>
-
-            <button id="done">Done</button>
-        </div>
-        <div class="owners-li">
-
-            <div class="list list1">
-                <p><span class="name"></span><span class="s">'s</span> Favourite things</p>
-                <p class="switch">Switch</p>
-                <ul id="ul">
-                    <li id="notin">
-                        <div class="food"></div>
-                        <div class="change">
-                            <div class="edit"></div>
-                            <div class="delete"></div>
-                        </div>
-                    </li>
-                    <li id="food">Food: <div class="food"></div>
-                        <div class="change">
-                            <div class="edit">Edit <div class="questhide">What your favorite food</div>
-                            </div>
-                            <div class="delete">Delete</div>
-                        </div>
-                    </li>
-                    <li id="frnd">Friend: <div class="frnd"></div>
-                        <div class="change">
-                            <div class="edit">Edit <div class="questhide">Who is your favorite Friend</div>
-                            </div>
-                            <div class="delete">Delete</div>
-                        </div>
-                    </li>
-                    <li id="num">place: <div class="num"></div>
-                        <div class="change">
-                            <div class="edit">Edit <div class="questhide">What your favorite place</div>
-                            </div>
-                            <div class="delete">Delete</div>
-                        </div>
-                    </li>
-                    <li id="game">Game: <div class="game"></div>
-                        <div class="change">
-                            <div class="edit">Edit <div class="questhide">What your favorite Game</div>
-                            </div>
-                            <div class="delete">Delete</div>
-                        </div>
-                    </li>
-                    <li id="movie">Movie: <div class="movie"></div>
-                        <div class="change">
-                            <div class="edit">Edit <div class="questhide">What your favorite Movie</div>
-                            </div>
-                            <div class="delete">Delete</div>
-                        </div>
-                    </li>
-                    <li id="song">Song: <div class="song"></div>
-                        <div class="change">
-                            <div class="edit">Edit <div class="questhide">What your favorite song</div>
-                            </div>
-                            <div class="delete">Delete</div>
-                        </div>
-                    </li>
-                    <li id="color">Color: <div class="color"></div>
-                        <div class="change">
-                            <div class="editcolour edit">Edit <div class="questhide">Name of color</div>
-                            </div>
-                            <div class="delete">Delete</div>
-                        </div>
-                    </li>
-                </ul>
-            </div>
-            <div class="list list2">
-                <p>Compared Result</p>
-                <p class="letgo">Please Wait for result...</p>
-                <input type="text" value="0" id="compareinput" class="input">
-              <div class="changecomp">  <div class="image"><img src="img/enmy.webp" alt=""></div>
-              <p class="return">There was no match you might never be friends</p>
-              <a href="index.html"><button id="again" class="comping">play again</button></a></div>
-                <ul id="ul" class="compare">
-                    <li id="foodresult">Food: <div class="foodresult"></div>
-                    </li>
-                    <li id="frndresult">Friend: <div class="frndresult"></div>
-                    </li>
-                    <li id="numresult">place: <div class="numresult"></div>
-                    </li>
-                    <li id="gameresult">Game: <div class="gameresult"></div>
-                    </li>
-                    <li id="movieresult">Movie: <div class="movieresult"></div>
-                    </li>
-                    <li id="songresult">Song: <div class="songresult"></div>
-                    </li>
-                    <li id="colorresult">Color: <div class="colorresult"></div>
-                    </li>
-                </ul>
-            </div>
-
-            <div class="buttin">
-                <p>See result</p>
-                <button class="comp comping">Compare</button>
-            </div>
-
-            <div class="list list3">
-                <p><span class="name2">Friend</span><span class="s2">'s</span> Favourite things</p>
-                <p class="switch">Switch</p>
-                <ul id="ul">
-                    <li id="notin">
-                        <div class="food"></div>
-                        <div class="change">
-                            <div class="edit2"></div>
-                            <div class="delete2"></div>
-                        </div>
-                    </li>
-                    <li id="food2">Food: <div class="food2"></div>
-                        <div class="change">
-                            <div class="edit2">Edit <div class="questhide">Friends What your favorite food</div>
-                            </div>
-                            <div class="delete2">Delete</div>
-                        </div>
-                    </li>
-                    <li id="frnd2">Friend: <div class="frnd2"></div>
-                        <div class="change">
-                            <div class="edit2">Edit <div class="questhide">Friends Who is your favorite Friend</div>
-                            </div>
-                            <div class="delete2">Delete</div>
-                        </div>
-                    </li>
-                    <li id="num2">place: <div class="num2"></div>
-                        <div class="change">
-                            <div class="edit2">Edit <div class="questhide">Friends What your favorite place</div>
-                            </div>
-                            <div class="delete2">Delete</div>
-                        </div>
-                    </li>
-                    <li id="game2">Game: <div class="game2"></div>
-                        <div class="change">
-                            <div class="edit2">Edit <div class="questhide">Friends What your favorite Game</div>
-                            </div>
-                            <div class="delete2">Delete</div>
-                        </div>
-                    </li>
-                    <li id="movie2">Movie: <div class="movie2"></div>
-                        <div class="change">
-                            <div class="edit2">Edit <div class="questhide">Friends What your favorite Movie</div>
-                            </div>
-                            <div class="delete2">Delete</div>
-                        </div>
-                    </li>
-                    <li id="song2">Song: <div class="song2"></div>
-                        <div class="change">
-                            <div class="edit2">Edit <div class="questhide">Friends What your favorite song</div>
-                            </div>
-                            <div class="delete2">Delete</div>
-                        </div>
-                    </li>
-                    <li id="color2">Color: <div class="color2"></div>
-                        <div class="change">
-                            <div class="editcolour2 edit2">Edit <div class="questhide">Name of color</div>
-                            </div>
-                            <div class="delete2">Delete</div>
-                        </div>
-                    </li>
-                </ul>
-            </div>
-        </div>
-
-    </main>
+   <div class="ch">
+    <div class="mainbdy hide">
+        <button class="start">
+          start
+        </button>
+      </div>
+     <div class="show1">
+      <div class="mainbdy">
+          <div class="cube font">
+              
+              <div class="top"></div>
+              <div>
+                  <span style="--i:0;"></span>
+                  <span style="--i:1;"></span>
+                  <span style="--i:2;"></span>
+                  <span style="--i:3;"></span>
+              </div>
+              <div class="but"></div>
+          </div>
+          <p>LOADING...</p>
+      </div>
+     </div>
+      <main class="cont">
+          <div class="fav">
+              <p> Favourite list</p>
+          </div>
+          <div class="inputs">
+              <input type="text" value="0" readonly id="input1" class="input"><input value="What is your name" type="text"
+                  placeholder="Tap screen to see question" id="input2" class="input"> <input placeholder="Name of colour"
+                  type="text" class="input" id="input3">
+              <button id="drop">Drop</button>
+  
+              <button id="done">Done</button>
+          </div>
+          <div class="owners-li">
+  
+              <div class="list list1">
+                  <p><span class="name"></span><span class="s">'s</span> Favourite things</p>
+                  <p class="switch">Switch</p>
+                  <ul id="ul">
+                      <li id="notin">
+                          <div class="food"></div>
+                          <div class="change">
+                              <div class="edit"></div>
+                              <div class="delete"></div>
+                          </div>
+                      </li>
+                      <li id="food">Food: <div class="food"></div>
+                          <div class="change">
+                              <div class="edit">Edit <div class="questhide">What your favorite food</div>
+                              </div>
+                              <div class="delete">Delete</div>
+                          </div>
+                      </li>
+                      <li id="frnd">Friend: <div class="frnd"></div>
+                          <div class="change">
+                              <div class="edit">Edit <div class="questhide">Who is your favorite Friend</div>
+                              </div>
+                              <div class="delete">Delete</div>
+                          </div>
+                      </li>
+                      <li id="num">place: <div class="num"></div>
+                          <div class="change">
+                              <div class="edit">Edit <div class="questhide">What your favorite place</div>
+                              </div>
+                              <div class="delete">Delete</div>
+                          </div>
+                      </li>
+                      <li id="game">Game: <div class="game"></div>
+                          <div class="change">
+                              <div class="edit">Edit <div class="questhide">What your favorite Game</div>
+                              </div>
+                              <div class="delete">Delete</div>
+                          </div>
+                      </li>
+                      <li id="movie">Movie: <div class="movie"></div>
+                          <div class="change">
+                              <div class="edit">Edit <div class="questhide">What your type of Movie</div>
+                              </div>
+                              <div class="delete">Delete</div>
+                          </div>
+                      </li>
+                      <li id="song">Song: <div class="song"></div>
+                          <div class="change">
+                              <div class="edit">Edit <div class="questhide">What your type of song</div>
+                              </div>
+                              <div class="delete">Delete</div>
+                          </div>
+                      </li>
+                      <li id="color">Color: <div class="color"></div>
+                          <div class="change">
+                              <div class="editcolour edit">Edit <div class="questhide">Name of color</div>
+                              </div>
+                              <div class="delete">Delete</div>
+                          </div>
+                      </li>
+                  </ul>
+              </div>
+              <div class="list list2">
+                  <p>Compared Result</p>
+                  <p class="letgo">Please Wait for result...</p>
+                  <input type="text" value="0" id="compareinput" class="input">
+                <div class="changecomp">  <div class="image"><img src="img/guys not fr.webp" alt=""></div>
+                <p class="return">There was no match you might never be friends</p>
+                <a href="index.html"><button id="again" class="comping">play again</button></a></div>
+                  <ul id="ul" class="compare">
+                      <li id="foodresult">Food: <div class="foodresult"></div>
+                      </li>
+                      <li id="frndresult">Friend: <div class="frndresult"></div>
+                      </li>
+                      <li id="numresult">place: <div class="numresult"></div>
+                      </li>
+                      <li id="gameresult">Game: <div class="gameresult"></div>
+                      </li>
+                      <li id="movieresult">Movie: <div class="movieresult"></div>
+                      </li>
+                      <li id="songresult">Song: <div class="songresult"></div>
+                      </li>
+                      <li id="colorresult">Color: <div class="colorresult"></div>
+                      </li>
+                  </ul>
+              </div>
+  
+              <div class="buttin">
+                  <p>See result</p>
+                  <button class="comp comping">Compare</button>
+              </div>
+  
+              <div class="list list3">
+                  <p><span class="name2">Friend</span><span class="s2">'s</span> Favourite things</p>
+                  <p class="switch">Switch</p>
+                  <ul id="ul">
+                      <li id="notin">
+                          <div class="food"></div>
+                          <div class="change">
+                              <div class="edit2"></div>
+                              <div class="delete2"></div>
+                          </div>
+                      </li>
+                      <li id="food2">Food: <div class="food2"></div>
+                          <div class="change">
+                              <div class="edit2">Edit <div class="questhide">Friends What your favorite food</div>
+                              </div>
+                              <div class="delete2">Delete</div>
+                          </div>
+                      </li>
+                      <li id="frnd2">Friend: <div class="frnd2"></div>
+                          <div class="change">
+                              <div class="edit2">Edit <div class="questhide">Friends Who is your favorite Friend</div>
+                              </div>
+                              <div class="delete2">Delete</div>
+                          </div>
+                      </li>
+                      <li id="num2">place: <div class="num2"></div>
+                          <div class="change">
+                              <div class="edit2">Edit <div class="questhide">Friends What your favorite place</div>
+                              </div>
+                              <div class="delete2">Delete</div>
+                          </div>
+                      </li>
+                      <li id="game2">Game: <div class="game2"></div>
+                          <div class="change">
+                              <div class="edit2">Edit <div class="questhide">Friends What your favorite Game</div>
+                              </div>
+                              <div class="delete2">Delete</div>
+                          </div>
+                      </li>
+                      <li id="movie2">Movie: <div class="movie2"></div>
+                          <div class="change">
+                              <div class="edit2">Edit <div class="questhide">Friends What your type of Movie</div>
+                              </div>
+                              <div class="delete2">Delete</div>
+                          </div>
+                      </li>
+                      <li id="song2">Song: <div class="song2"></div>
+                          <div class="change">
+                              <div class="edit2">Edit <div class="questhide">Friends What your type of song</div>
+                              </div>
+                              <div class="delete2">Delete</div>
+                          </div>
+                      </li>
+                      <li id="color2">Color: <div class="color2"></div>
+                          <div class="change">
+                              <div class="editcolour2 edit2">Edit <div class="questhide">Name of color</div>
+                              </div>
+                              <div class="delete2">Delete</div>
+                          </div>
+                      </li>
+                  </ul>
+              </div>
+          </div>
+  
+      </main>
+   </div>
 
     <div class="questions">
 <p class="adi"><audio src="audio/song.mp3" autoplay loop controls></audio></p>
@@ -198,15 +221,15 @@
             <li class="quest2">Who is your favorite Friend</li>
             <li class="quest3">What your favorite place</li>
             <li class="quest4">What your favorite Game</li>
-            <li class="quest5">What your favorite Movie</li>
-            <li class="quest6">What your favorite song</li>
+            <li class="quest5">What your type of Movie</li>
+            <li class="quest6">What your type of song</li>
             <li class="questfrdnm">What is your friend's name</li>
             <li class="quest8">Friend What your favorite food</li>
             <li class="quest9">Friend Who is your favorite Friend</li>
             <li class="quest10">Friend What your favorite place</li>
             <li class="quest11">Friend What your favorite Game</li>
-            <li class="quest12">Friend What your favorite Movie</li>
-            <li class="quest13">Friend What your favorite song</li>
+            <li class="quest12">Friend What your type of Movie</li>
+            <li class="quest13">Friend What your type of song</li>
         </ul>
     </div>
 
