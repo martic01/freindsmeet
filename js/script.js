@@ -10,8 +10,8 @@ function colourInput() {
 }
 function firstLetter(textinput) {
     let newText = textinput.trim();
-    let shift =  newText.charAt(0).toUpperCase();
-    let remain = newText.slice(1,newText.length);
+    let shift = newText.charAt(0).toUpperCase();
+    let remain = newText.slice(1, newText.length);
     let joinin = shift + remain
     let trimed = joinin
     return trimed
@@ -22,7 +22,7 @@ function compareInput() {
 }
 function textUpercase() {
     let newText = $("li").html();
-    let shift =  newText.charAt(0).toUpperCase()
+    let shift = newText.charAt(0).toUpperCase()
     return shift
 }
 function increaseByone() {
@@ -30,6 +30,14 @@ function increaseByone() {
 }
 function increaseByone2() {
     return compareInput() + 1;
+}
+function starting() {
+    $(".show1").show()
+    $(".hide").hide()
+    setTimeout(function () {
+        $(".show1").hide()
+        $(".cont").show()
+    }, 6000);
 }
 function PromtTimer() {
     $(".letgo").show()
@@ -40,7 +48,7 @@ function PromtTimer() {
         $(".compare").hide()
         $(".changecomp").show()
         $(".image").html('<img src="img/close.webp">')
-        $(".return").html(compareInput() + " matches you might become friends" )
+        $(".return").html(compareInput() + " matches you might become friends")
     }, 8000);
 }
 function PromtTimer2() {
@@ -52,7 +60,7 @@ function PromtTimer2() {
         $(".compare").hide()
         $(".changecomp").show()
         $(".image").html('<img src="img/almost.webp">')
-        $(".return").html(compareInput() + " matches you will be bestfriends" )
+        $(".return").html(compareInput() + " matches you will be bestfriends")
     }, 8000);
 }
 function PromtTimer3() {
@@ -63,8 +71,8 @@ function PromtTimer3() {
         $(".letgo").hide()
         $(".compare").hide()
         $(".changecomp").show()
-        $(".image").html('<img src="img/good.webp">')
-        $(".return").html("All matches you will be Bestfriends , if you two are opposite gender you might get married" )
+        $(".image").html('<img src="img/thight fr.webp">')
+        $(".return").html("All matches you will be Bestfriends , if you two are opposite gender you might get married")
     }, 8000);
 }
 function PromtTimer4() {
@@ -76,9 +84,10 @@ function PromtTimer4() {
         $(".compare").hide()
         $(".changecomp").show()
         $(".image").html('<img src="img/almost.webp">')
-        $(".return").html("There is nothing to compare your names match friends list names , that shows you are friends already" )
+        $(".return").html("There is nothing to compare your names matches friends list names , that shows you are friends already")
     }, 8000);
 }
+
 function arrayDrop() {
     //   let  renewedArray = {};
     let maxLength = 16
@@ -345,7 +354,7 @@ function compareResult() {
         { value1: color1, value2: color2, resultClass: ".colorresult", resultId: "#colorresult" }
     ];
 
-    comparisons.forEach(function(comparison) {
+    comparisons.forEach(function (comparison) {
         if (comparison.value1 === comparison.value2) {
             $(comparison.resultClass).html(comparison.value1);
             $(comparison.resultId).show();
@@ -368,57 +377,57 @@ function compareResult() {
         $(".name2").addClass("green");
         PromtTimer4()
     }
-    if (food1 === food2 ) {
+    if (food1 === food2) {
         $(".foodresult").html(food1);
         $("#foodresult").show();
-       
+
 
     }
-    if (friend1 === friend2  ) {
+    if (friend1 === friend2) {
         $(".frndresult").html(friend1);
         $("#frndresult").show();
-       
+
     }
     if (number1 === number2) {
         $(".numresult").html(number1);
-       
+
         $("#numresult").show();
     }
     if (game1 === game2) {
         $(".gameresult").html(game1);
-       
+
         $("#gameresult").show();
     }
     if (movie1 === movie2) {
         $(".movieresult").html(movie1);
-       
+
         $("#movieresult").show();
     }
     if (song1 === song2) {
         $(".songresult").html(song1);
-       
+
         $("#songresult").show();
 
     }
     if (color1 === color2) {
         $(".colorresult").html(color1);
-       
+
         $("#colorresult").show();
     }
-    
-    if (compareInputl === 0 && friend1 !== secoundNm && friend2 !== firstNm ) {
+
+    if (compareInputl === 0 && friend1 !== secoundNm && friend2 !== firstNm) {
         $(".compare").hide()
         $(".changecomp").show()
     }
-   else if (compareInputl <= 4 && friend1 !== secoundNm && friend2 !== firstNm) {
-       PromtTimer()
+    else if (compareInputl <= 4 && friend1 !== secoundNm && friend2 !== firstNm) {
+        PromtTimer()
     }
-    else if (compareInputl  < 7 && friend1 !== secoundNm && friend2 !== firstNm) {
+    else if (compareInputl < 7 && friend1 !== secoundNm && friend2 !== firstNm) {
         PromtTimer2()
-     }
-     else if (compareInputl === 7 && friend1 !== secoundNm && friend2 !== firstNm) {
+    }
+    else if (compareInputl === 7 && friend1 !== secoundNm && friend2 !== firstNm) {
         PromtTimer3()
-     }
+    }
 
 }
 function doneButton() {
@@ -451,7 +460,9 @@ function doneButton() {
 }
 
 window.onload = function () {
-
+    $(".start").click(function () {
+        starting()
+    });
 
     $("#input2").click(function () {
         $("#input2").removeClass("redin");
@@ -481,51 +492,51 @@ window.onload = function () {
             $("#input2").val("");
         } else if (indexInput() === 2 && name === "" && name !== quest2) {
             $("#input2").val(quest2);
-        }else if (indexInput() === 2 && name !== "" && name === quest2) {
+        } else if (indexInput() === 2 && name !== "" && name === quest2) {
             $("#input2").val("");
         } else if (indexInput() === 3 && name === "" && name !== quest3) {
             $("#input2").val(quest3);
         } else if (indexInput() === 3 && name !== "" && name === quest3) {
             $("#input2").val("");
-        }else if (indexInput() === 4 && name === "" && name !== quest4) {
+        } else if (indexInput() === 4 && name === "" && name !== quest4) {
             $("#input2").val(quest4);
-        }else if (indexInput() === 4 && name !== "" && name === quest4) {
+        } else if (indexInput() === 4 && name !== "" && name === quest4) {
             $("#input2").val("");
         } else if (indexInput() === 5 && name === "" && name !== quest5) {
             $("#input2").val(quest5);
         } else if (indexInput() === 5 && name !== "" && name === quest5) {
             $("#input2").val("");
-        }else if (indexInput() === 6 && name === "" && name !== quest6) {
+        } else if (indexInput() === 6 && name === "" && name !== quest6) {
             $("#input2").val(quest6);
         } else if (indexInput() === 6 && name !== "" && name === quest6) {
             $("#input2").val("");
-        }else if (indexInput() === 8 && name === "" && name !== questFrdNm) {
+        } else if (indexInput() === 8 && name === "" && name !== questFrdNm) {
             $("#input2").val(questFrdNm);
-        }else if (indexInput() === 8 && name !== "" && name === questFrdNm) {
+        } else if (indexInput() === 8 && name !== "" && name === questFrdNm) {
             $("#input2").val("");
         } else if (indexInput() === 9 && name === "" && name !== quest8) {
             $("#input2").val(quest8);
-        }else if (indexInput() === 9 && name !== "" && name === quest8) {
+        } else if (indexInput() === 9 && name !== "" && name === quest8) {
             $("#input2").val("");
         } else if (indexInput() === 10 && name === "" && name !== quest9) {
             $("#input2").val(quest9);
-        }else if (indexInput() === 10 && name !== "" && name === quest9) {
+        } else if (indexInput() === 10 && name !== "" && name === quest9) {
             $("#input2").val("");
         } else if (indexInput() === 11 && name === "" && name !== quest10) {
             $("#input2").val(quest10);
-        }else if (indexInput() === 11 && name !== "" && name === quest10) {
+        } else if (indexInput() === 11 && name !== "" && name === quest10) {
             $("#input2").val("");
         } else if (indexInput() === 12 && name === "" && name !== quest11) {
             $("#input2").val(quest11);
         } else if (indexInput() === 12 && name !== "" && name === quest11) {
             $("#input2").val("");
-        }else if (indexInput() === 13 && name === "" && name !== quest12) {
+        } else if (indexInput() === 13 && name === "" && name !== quest12) {
             $("#input2").val(quest12);
         } else if (indexInput() === 13 && name !== "" && name === quest12) {
             $("#input2").val("");
-        }else if (indexInput() === 14 && name === "" && name !== quest13) {
+        } else if (indexInput() === 14 && name === "" && name !== quest13) {
             $("#input2").val(quest13);
-        }else if (indexInput() === 14 && name !== "" && name === quest13) {
+        } else if (indexInput() === 14 && name !== "" && name === quest13) {
             $("#input2").val("");
         } else {
             $("#input2").val(name);
