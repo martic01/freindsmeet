@@ -30,12 +30,56 @@ body {
 main {
     display: none;
 }
+
 @media only screen and (max-width:565px) {
 
-.ch{
-    margin-top: 600px;
+    .ch {
+        margin-top: 600px;
+    }
+    .mainbdy {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+        min-height: 120vh !important;
+        font-size: 20px;
+        font-weight: 800;
+        margin: auto;
+        width: 1400px;
+        color: red;
+        background-color: #eaeaff;
+    }
+    
+    .cont {
+        margin: 100px auto;
+        width: 1400px;
+        height: 900px !important;
+        background-color: #eaeaff;
+        box-shadow: 0 0 8px -4px black;
+        overflow: scroll;
+        animation: fadein2 2s linear forwards;
+    }
+
+    .inputs {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+        width: 85%;
+        height: 80px !important;
+        margin: 20px auto;
+        background-color: rgba(5, 51, 51, 0.61);
+    }
+
+    .owners-li .list {
+        width: 70%;
+        height: 85% !important;
+        border-radius: 20px;
+        box-shadow: 0 0 30px -5px rgb(14, 1, 1);
+        background-color: #fff;
+    }
 }
-}
+
 .pj-nm {
     margin: 30px auto;
     text-align: center;
@@ -109,6 +153,8 @@ main {
     height: 550px;
     background-color: #eaeaff;
     box-shadow: 0 0 8px -4px black;
+
+    animation: fadein2 2s linear forwards;
 }
 
 .fav {
@@ -606,7 +652,7 @@ img {
     display: none;
 }
 
-.start{
+.start {
     height: 70px;
     width: 500px;
     font-size: 30px;
@@ -615,16 +661,19 @@ img {
     text-shadow: 0 10px rgba(0, 0, 0, 0.466);
     color: #fff;
     font-weight: 800;
-    border: none;
-    border-radius: 20%;
+    border: 2px solid rgba(231, 193, 193, 0.808);
+    border-radius: 30%;
 }
-.start:hover{
+
+.start:hover {
     transition: 0.6s;
     background-color: #041575;
     color: #e7b3b7;
-    box-shadow: 0  0 7px rgb(12, 12, 12);
-    border: 4px solid rgba(255, 255, 255, 0.808);
+    font-size: 40px;
+    box-shadow: 0 0 7px rgb(12, 12, 12);
+    border: 6px solid rgba(255, 255, 255, 0.808);
 }
+
 /* cube */
 
 
@@ -645,9 +694,11 @@ img {
     color: red;
     background-color: #eaeaff;
 }
-.show1{
+
+.show1 {
     display: none;
 }
+
 .cube {
     position: relative;
     height: 70px;
