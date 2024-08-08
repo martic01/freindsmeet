@@ -30,12 +30,17 @@ body {
 main {
     display: none;
 }
+@media only screen and (max-width:565px) {
 
+.ch{
+    margin-top: 600px;
+}
+}
 .pj-nm {
     margin: 30px auto;
     text-align: center;
     padding-top: 2px;
-    width: 550px;
+    width: 1400px;
     height: 100px;
     border-radius: 20px;
 
@@ -635,6 +640,8 @@ img {
     min-height: 70vh;
     font-size: 20px;
     font-weight: 800;
+    margin: auto;
+    width: 1400px;
     color: red;
     background-color: #eaeaff;
 }
